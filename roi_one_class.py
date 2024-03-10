@@ -30,7 +30,7 @@ class ROI():
 
 
     def annual_percentage(self):
-        self.investment = float(input("Enter your total amount invested (down payment, closing costs, repairs, etc): "))
+        self.investment = float(input("Enter your total amount invested (downpayment, closing costs, repairs, etc): "))
         prop_name = input("Enter the property name: ")
         year_profit = self.profit * 12
         annual = (year_profit / self.investment) * 100
@@ -40,7 +40,9 @@ class ROI():
 
     def ROI_calculator(self):
         while True:
+
             rentals_user = input("Press S to start ROI calculator. Remember to input data required in numerical form only. No special characters. Once finished with all properties, press Q to quit program. ").upper()
+
             if rentals_user == 'S':
                 self.total_income()
                 self.total_expenses()
@@ -50,6 +52,7 @@ class ROI():
             elif rentals_user == 'Q':
                 print("Thank you for using the ROI calculator!")
                 break
+
             else:
                 print("Please enter a valid option: S to start, Q to quit. Thank you. ")
 
